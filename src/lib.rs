@@ -4,6 +4,8 @@
 #![no_std]
 #![feature(const_generics)]
 
+mod drain;
+
 use core::ptr;
 use core::slice;
 use core::cmp::Ordering;
@@ -373,3 +375,4 @@ impl<T, const N: usize> From<[T; N]> for ArrayVec<T, { N }> {
     vec
   }
 }
+
